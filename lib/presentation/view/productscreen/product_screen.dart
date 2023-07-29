@@ -8,6 +8,7 @@ import 'package:magdsoft_flutter_structure_master1/component/create_textform.dar
 import 'package:magdsoft_flutter_structure_master1/constants/colors.dart';
 import 'package:magdsoft_flutter_structure_master1/constants/hexa_color.dart';
 import 'package:magdsoft_flutter_structure_master1/constants/images.dart';
+import 'package:magdsoft_flutter_structure_master1/presentation/widgets/productscreen/tabbar_widget.dart';
 
 class ProductsScreen extends StatefulWidget {
   const ProductsScreen({super.key});
@@ -39,6 +40,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
           child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -322,18 +324,16 @@ class _ProductsScreenState extends State<ProductsScreen> {
                         ],
                       ),
                       Container(
-                        width: ScreenUtil().setWidth(280),
+                        width: ScreenUtil().setWidth(260),
                         height: ScreenUtil().setHeight(2),
                         color: AppColor.borderColor,
-                        // thickness: 2,
                       )
                     ],
                   ),
                 ),
                 SizedBox(
-                    child: Row(
-                  children: [],
-                ))
+                    // height: MediaQuery.of(context).size.height * .07,
+                    child: TabBarWidget()),
               ],
             ),
           ),
